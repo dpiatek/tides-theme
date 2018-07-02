@@ -1,127 +1,42 @@
-/* Variables
-/* ---------------------------------------------------------- */
-
 :root {
-    /* Colours */
-    --blue: #3eb0ef;
-    --green: #a4d037;
-    --purple: #ad26b4;
-    --yellow: #fecd35;
-    --red: #f05230;
-    --darkgrey: #15171A;
-    --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
-    --whitegrey: #e5eff5;
-    --pink: #fa3a57;
-    --brown: #a3821a;
+  --poiret: "Poiret One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --lato: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --spacing: 20px;
+  --white: #f0f2f2;
 }
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-::selection {
-    text-shadow: none;
-    background: color(var(--blue) lightness(+30%));
+body {
+  margin: 0;
+  color: var(--white);
+  background: linear-gradient(90deg, hsla(188, 69%, 14%, 1), hsla(201, 31%, 33%, 1)),
+            hsla(188, 69%, 14%, 1);
+  font-size: 18px;
+  font-weight: 300;
+  font-family: var(--lato);
+  line-height: 1.5;
 }
 
-textarea {
-    resize: vertical;
+main {
+  position: relative;
 }
 
-p,
-ul,
-ol,
-dl,
-blockquote {
-    margin: 0 0 1.5em 0;
-}
-
-ol,
-ul {
-    padding-left: 1.3em;
-    padding-right: 1.5em;
-}
-
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-    margin: 0.5em 0 1em;
-}
-
-ul {
-    list-style: disc;
-}
-
-ol {
-    list-style: decimal;
-}
-
-ul,
-ol {
-    max-width: 100%;
-}
-
-li {
-    margin: 0.5em 0;
-    padding-left: 0.3em;
-    line-height: 1.6em;
-}
-
-dt {
-    float: left;
-    margin: 0 20px 0 0;
-    width: 120px;
-    color: var(--darkgrey);
-    font-weight: 500;
-    text-align: right;
-}
-
-dd {
-    margin: 0 0 5px 0;
-    text-align: left;
-}
-
-blockquote {
-    margin: 1.5em 0;
-    padding: 0 1.6em 0 1.6em;
-    border-left: var(--whitegrey) 0.5em solid;
-}
-
-blockquote p {
-    margin: 0.8em 0;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size: 0.9em;
-    opacity: 0.8;
-}
-
-/* Quotation marks */
-blockquote small:before {
-    content: "\2014 \00A0";
-}
-
-blockquote cite {
-    font-weight: bold;
-}
-
-blockquote cite a {
-    font-weight: normal;
-}
-
-a {
-    color: color(var(--blue) l(-5%));
-    text-decoration: none;
+a:link,
+a:visited,
+a:hover {
+  color: #80b2cc;
 }
 
 a:hover {
-    text-decoration: underline;
+  cursor: pointer;
+  color: #6fb6dc;
+}
+
+p {
+  margin: 0 0 var(--spacing);
+}
+
+b {
+  font-weight: 700;
 }
 
 h1,
@@ -130,61 +45,6 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    line-height: 1.15;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-}
-
-h1 {
-    margin: 0 0 0.5em 0;
-    font-size: 5rem;
-    font-weight: 700;
-}
-
-@media (max-width: 500px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-}
-
-h2 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2rem;
-}
-
-@media (max-width: 500px) {
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-h3 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-@media (max-width: 500px) {
-    h3 {
-        font-size: 1.7rem;
-    }
-}
-
-h4 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-h5 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-h6 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 1.4rem;
-    font-weight: 500;
+  font-family: var(--poiret);
+  font-weight: 400;
 }

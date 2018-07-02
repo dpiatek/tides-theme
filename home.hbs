@@ -1,0 +1,12 @@
+{{!< default}}
+
+<main>
+  <div class="main-img" {{#if @blog.cover_image}} style="background: center / cover no-repeat url({{@blog.cover_image}}){{/if}}"></div>
+  <section class="main-content" {{#if @blog.cover_image}} style="background: linear-gradient(90deg, hsla(188, 69%, 0%, 0.8), hsla(201, 31%, 25%, 0.8)), top / cover no-repeat url({{@blog.cover_image}}), hsla(188, 69%, 0%, 0.8){{/if}}">
+    {{navigation}}
+
+    <p class="introduce-yourself">Hello, I'm Dominik.</p>
+    <p class="intro-copy">I'm a web developer. I specialize in front-end technologies and love building great user interfaces.</p>
+    <p class="intro-copy">I work for <a href="https://red-badger.com/">Red Badger</a>, a software consultancy, building solutions for companies like <a href="https://www.fortnumandmason.com">Fortnum &amp; Mason</a>. Previously, I worked for <a href="https://econsultancy.com/">Econsultancy</a> and with <a href="http://marcossebastian.com/">Marcos Sebastian</a>.</p>
+  </section>
+</main>
