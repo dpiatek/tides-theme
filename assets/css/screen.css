@@ -76,17 +76,22 @@
 }
 
 .introduce-yourself {
-  font-size: 52px;
+  font-size: 68px;
   font-family: var(--poiret);
   line-height: 1;
   font-weight: 900;
-  margin: 60px 0 40px;
+  margin: 25vh 0 40px;
 }
 
 .intro-copy {
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 400;
   line-height: 1.4;
+  max-width: 480px;
+}
+
+.intro-copy--no-margin {
+  margin-bottom: 0;
 }
 
 .post-listing {
