@@ -1,6 +1,19 @@
 @import "normalize.css";
 @import "global.css";
 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
 .main-img {
   width: 40vw;
   height: 100vh;
@@ -31,12 +44,14 @@
 }
 
 .navigation {
-  margin: var(--spacing) 0 60px;
-  padding: 0;
+  margin: var(--spacing) 0 calc(var(--spacing) * 2);
   border-bottom: 2px solid white;
+}
 
+.navigation ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
-
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -72,4 +87,41 @@
   font-size: 28px;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.post-listing {
+  margin: 0 0 calc(var(--spacing) * 2);
+}
+
+.post-listing-excerpt {
+  font-style: italic;
+  max-width: 620px;
+}
+
+.post-listing-meta {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  max-width: 620px;
+}
+
+.post-listing-tags {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-listing-tags li {
+  display: inline;
+}
+
+.post-listing-tags a {
+  color: var(--white);
+}
+
+.post-listing-spacer {
+  margin: 0 10px;
+  color: var(--blue);
 }

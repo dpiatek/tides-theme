@@ -3,6 +3,7 @@
   --lato: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --spacing: 20px;
   --white: #f0f2f2;
+  --blue: #80b2cc;
 }
 
 body {
@@ -23,7 +24,7 @@ main {
 a:link,
 a:visited,
 a:hover {
-  color: #80b2cc;
+  color: var(--blue);
 }
 
 a:hover {
@@ -47,4 +48,16 @@ h5,
 h6 {
   font-family: var(--poiret);
   font-weight: 400;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+h1 {
+  font-size: 56px;
+  margin: 0 0 calc(var(--spacing) * 2);
+}
+
+h2 {
+  font-size: 38px;
+  margin: 0 0 var(--spacing);
 }

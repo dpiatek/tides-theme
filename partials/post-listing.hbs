@@ -1,0 +1,22 @@
+<article class="post-listing">
+  <a href="{{url}}">
+    <h2>{{title}}</h2>
+  </a>
+  <p class="post-listing-excerpt">{{excerpt}}</p>
+  <div class="post-listing-meta">
+    <span>{{date published_at format="MMMM DD, YYYY"}}</span>
+    <span class="post-listing-spacer">●</span>
+    <span class="reading-time">{{reading_time}}</span>
+    {{#if tags}}
+    <span class="post-listing-spacer">●</span>
+    <ul class="post-listing-tags">
+      {{#foreach tags}}
+      <li>
+        <a href="{{url}}" title="{{name}}">{{name}}</a>
+        {{#unless @last}}<span>,</span>{{/unless}}
+      </li>
+      {{/foreach}}
+    </ul>
+    {{/if}}
+  </div>
+</article>

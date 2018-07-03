@@ -4,11 +4,10 @@
   <div class="main-img" {{#if post.feature_image}} style="background: center / cover no-repeat url({{post.feature_image}}){{/if}}"></div>
   <section class="main-content" {{#if post.feature_image}} style="background: linear-gradient(90deg, hsla(188, 69%, 0%, 0.8), hsla(201, 31%, 25%, 0.8)), top / cover url({{post.feature_image}}), hsla(188, 69%, 0%, 0.8){{/if}}">
     {{navigation}}
-    <h1 class="page-title">Blog</h1>
-
-    {{#get "posts" limit="all" as |allposts| }}
+    <h1 class="visuallyhidden">Blog</h1>
+    {{#get "posts" limit="all" include="tags" as |allposts| }}
     {{#foreach allposts}}
-       {{>post-card}}
+       {{>post-listing}}
     {{/foreach}}
     {{/get}}
   </section>
