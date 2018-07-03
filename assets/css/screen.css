@@ -130,3 +130,16 @@
   margin: 0 10px;
   color: var(--blue);
 }
+
+.attribution {
+  font-family: Raleway;
+  font-size: 12px;
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  width: 40vw;
+}
+
+.attribution a {
+  color: var(--white);
+}
