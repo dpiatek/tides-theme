@@ -87,7 +87,7 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 1.4;
-  max-width: 480px;
+  max-width: 540px;
 }
 
 .intro-copy--no-margin {
@@ -95,6 +95,7 @@
 }
 
 .post-listing {
+  max-width: 860px;
   margin: 0 0 calc(var(--spacing) * 2);
 }
 
