@@ -71,11 +71,24 @@
   font-weight: 700;
 }
 
-.introduce-yourself {
+.introduce-yourself,
+.post-title {
   font-size: 42px;
   font-family: var(--poiret);
   line-height: 1.2;
   font-weight: 900;
+}
+
+.post-title {
+  margin: 0 0 20px;
+}
+
+.post-published {
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.introduce-yourself {
   margin: 10vh 0 20px;
 }
 
@@ -93,6 +106,7 @@
 .post-listing {
   max-width: 860px;
   margin: 0 0 calc(var(--spacing) * 2);
+  font-style: normal;
 }
 
 .post-listing-excerpt {
@@ -126,6 +140,7 @@
 .post-listing-spacer {
   margin: 0 10px;
   color: var(--blue);
+  font-style: normal;
 }
 
 .attribution {
@@ -138,6 +153,20 @@
 
 .attribution a {
   color: var(--white);
+}
+
+.post h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 40px 0 30px;
+}
+
+.post article {
+  max-width: 760px;
+}
+
+.post h1 {
+  max-width: 1020px;
 }
 
 @media (min-width: 360px) {
@@ -184,16 +213,39 @@
     width: 40vw;
   }
 
+  .post-title {
+    /* fallback */
+    font-size: 42px;
+    /* minFontSize + ((100vw - minScreenSize) / ((maxScreenSize - minScreenSize) / (maxFontSize - minFontSize))) */
+    font-size: calc(42px + ((100vw - 960px) / ((1300 - 960) / (63 - 42))));
+  }
+
   .introduce-yourself {
     margin-top: 21vh;
+    /* fallback */
     font-size: 60px;
     /* minFontSize + ((100vw - minScreenSize) / ((maxScreenSize - minScreenSize) / (maxFontSize - minFontSize))) */
-    font-size: calc(60px + ((100vw - 960px) / ((960 - 960) / (85 - 60))));
+    font-size: calc(60px + ((100vw - 960px) / ((1300 - 960) / (85 - 60))));
+  }
+
+  .post h2 {
+    /* fallback */
+    font-size: 32px;
+    /* minFontSize + ((100vw - minScreenSize) / ((maxScreenSize - minScreenSize) / (maxFontSize - minFontSize))) */
+    font-size: calc(32px + ((100vw - 960px) / ((1300 - 960) / (52 - 32))));
   }
 }
 
 @media (min-width: 1300px) {
   .introduce-yourself {
+    font-size: 85px;
+  }
 
+  .post-title {
+    font-size: 63px;
+  }
+
+  .post h2 {
+    font-size: 52px;
   }
 }

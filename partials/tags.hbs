@@ -1,0 +1,10 @@
+{{#if tags}}
+  <ul class="post-listing-tags">
+    {{#foreach tags}}
+    <li>
+      <a href="{{url}}" title="{{name}}">{{name}}</a>
+      {{#unless @last}}<span>,</span>{{/unless}}
+    </li>
+    {{/foreach}}
+  </ul>
+{{/if}}

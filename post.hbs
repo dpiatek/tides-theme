@@ -6,12 +6,20 @@
   <div class="main-img" {{#if feature_image}} style="background: center / cover no-repeat url({{feature_image}}){{/if}}">
     <span class="attribution"></span>
   </div>
-  <section class="main-content {{post_class}}" {{#if feature_image}} style="background: linear-gradient(90deg, hsla(188, 69%, 0%, 0.8), hsla(201, 31%, 25%, 0.8)), top / cover url({{feature_image}}), hsla(188, 69%, 0%, 0.8){{/if}}">
+  <div class="main-content post {{post_class}}" {{#if feature_image}} style="background: linear-gradient(90deg, hsla(188, 69%, 0%, 0.8), hsla(201, 31%, 25%, 0.8)), top / cover url({{feature_image}}), hsla(188, 69%, 0%, 0.8){{/if}}">
     {{navigation}}
-    <h1>{{title}}</h1>
-    <time class="post-full-meta-date" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="D MMMM YYYY"}}</time>
-    {{content}}
-  </section>
+    <section>
+      <h1 class="post-title">{{title}}</h1>
+      <div class="post-published">
+        Published: <time datetime="{{date published_at format=" YYYY-MM-DD "}}">{{date published_at format="D MMMM YYYY"}}</time>
+        <span class="post-listing-spacer">●</span>
+        Last updated: <time datetime="{{date updated_at format=" YYYY-MM-DD "}}">{{date updated_at format="D MMMM YYYY"}}</time>
+        <span class="post-listing-spacer">●</span>
+        {{>tags}}
+      </div>
+      <article>{{content}}</article>
+    </section>
+  </div>
 </main>
 
 {{/post}}
