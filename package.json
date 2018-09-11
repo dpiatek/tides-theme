@@ -10,6 +10,10 @@
     "dev": "gulp",
     "zip": "gulp zip"
   },
+  "author": {
+    "name": "Dominik Piatek",
+    "email": "do.piatek@gmail.com"
+  },
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "cssnano": "3.7.1",
